@@ -1,0 +1,69 @@
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}	% Pour l'encodage des caractères, nécessaire au lieu de fontspec pour utiliser les kp-fonts
+\usepackage[light,oldstyle,fulloldstylenums,nott,easyscsl]{kpfonts}	% Permet d'utiliser les kp-fonts
+\usepackage[utf8x]{inputenc}
+\usepackage{xltxtra}
+ \DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ } 
+\usepackage[english,francais]{babel}
+\usepackage[protrusion=true]{microtype}
+\usepackage[threshold=3]{csquotes}
+	% for commands "\blockquote" and related:
+	\renewcommand{\mkblockquote}[4]{\medskip\begin{spacing}{1.25}\openautoquote\small#1\closeautoquote#2#4#3\end{spacing}\medskip}
+	\renewcommand{\mkcitation}[1]{#1}
+	% for environments "displayquote" and related:
+	\renewcommand{\mkbegdispquote}[2]{\openautoquote}
+	\renewcommand{\mkenddispquote}[2]{\closeautoquote#1#2}
+
+\usepackage{setspace}	% permet de modifier l'interligne du document
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=2.25cm,a4paper]{geometry}  % permet de modifier les marges, etc.
+	\widowpenalty=10000		% pour la gestion des veuves et des orphelines
+	\clubpenalty=10000
+\usepackage{lettrine}
+\usepackage[bookmarks=true,hyperindex=true,colorlinks=false,linktoc=all,plainpages=false]{hyperref}	% permet des hyperliens cliquables
+	\urlstyle{same}
+\usepackage{array}  % permet un meilleur affichage des tableaux
+	\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{eurosym}    % permet d'avoir un symbole € avec la commande \EUR{}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{caption}	% Offre une meilleure gestion des légendes
+	\captionsetup[table]{name=Tableau, labelsep=endash,justification=centering,textfont={it,footnotesize},labelfont={small}, width=.8\textwidth}
+	\captionsetup[figure]{name=Figure, labelsep=endash,justification=centering,textfont={it,footnotesize},labelfont={small}, width=.8\textwidth}
+	\captionsetup[subfloat]{justification=centering,textfont={it,scriptsize},labelfont={footnotesize}, width=.4\textwidth}
+\usepackage[lofdepth, lotdepth, font={rm,md,sl,footnotesize}]{subfig} % permet d'avoir des figures subdivisées
+\usepackage{framed} % permet la bordure gauche de certains paragraphes
+\usepackage{fancybox}
+\usepackage{wrapfig}	% pour mettre des illustrations enveloppees de texte
+\usepackage{fmtcount} % permet d'afficher un compteur sous plusieurs formes
+\usepackage{paralist}	% permet l'obtention de listes inline
+\usepackage{numprint}	% permet d'avoir une espace entre chaque milliers
+\usepackage[nice]{nicefrac}		% permet de réaliser des fractions pour du texte avec la commande \nicefrac{}{} (e.g. 1/4)
+\usepackage{paralist}	% permet l'obtention de listes inline
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+	\usetikzlibrary{shapes.multipart,shapes.misc,decorations.text,patterns,decorations.pathreplacing}
+\usepackage{color}		% permet d'utiliser les couleurs
+	\definecolor{rouge}{rgb}{0.75,0,0}
+	\definecolor{gris}{rgb}{.50,.50,.50}
+	\definecolor{grisclair}{rgb}{.25,.25,.25}
+\usepackage[isbn=false, sorting=nyt, hyperref=true, url=false, maxnames=4, minnames=1, bibstyle=/Users/thenri/Documents/10_scolarite/10_universite/m1_meef/mabiblio, citestyle=verbose]{biblatex}	% pour la gestion de la bibiliographie
+%	\bibliography{biblio}
+\usepackage{multicol}
+	\setlength{\columnsep}{2em}
+	\setlength{\columnseprule}{0pt}
+\usepackage{imakeidx}	% pour la creation d'index
+	\makeindex
+
+\setcounter{tocdepth}{5}
+
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\fancyfoot[LE, RO]{\thepage{}}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+
+\input{/Users/thenri/Documents/20_informatique/latex/30_packages_perso/namedisp/namedisp.sty}
